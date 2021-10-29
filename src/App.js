@@ -3,17 +3,20 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Home from './components/Home/Home';
 import NoMatch from './components/NoMatch/NoMatch';
+import FriendDetail from './components/FriendDetail/FriendDetail';
 
 function App() {
   
   return (
     <Router>
       <Switch>
+        <Route path='/about/:friendId'>
+          <FriendDetail/>
+        </Route>
         <Route path="/home">
           <Home/>
         </Route>
